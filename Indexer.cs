@@ -25,7 +25,7 @@ namespace PocketGoogle
             return Tuple.Create(word.ToString(), startIndex);
         }
 
-        private static List<Tuple<string, int>> GetWords(string text)
+        private static List<Tuple<string, int>> GetTuples(string text)
         {
             var index = 0;
             var words = new List<Tuple<string, int>>();
@@ -47,14 +47,11 @@ namespace PocketGoogle
         public void Add(int id, string documentText)
         {
             texts[id] = documentText;
-            var index = 0;
-            while (index < documentText.Length)
+            var words = GetTuples(documentText);
+            foreach (var tuple in words)
             {
-                var tuple = GetWord(index, documentText);
                 var word = tuple.Item1;
-                var position = 0;
-                if (word == string.Empty)
-                    continue;
+                var index = tuple.Item2;
                 if (!Ids.ContainsKey(word))
                 {
                     Ids[word] = new Dictionary<int, List<int>>();
@@ -64,10 +61,8 @@ namespace PocketGoogle
                 {
                     Ids[word][id] = new List<int>();
                 }
-
-                Ids[word][id].Add(position);
-                position++;
-                index = tuple.Item2;
+                
+                Ids[word][id].Add(index);
             }
         }
 
@@ -83,7 +78,12 @@ namespace PocketGoogle
 
         public void Remove(int id)
         {
-            
+            var text = texts[id];
+            var tuples = GetTuples(text);
+            foreach (var word in tuples.Select(tuple => tuple.Item1))
+            {
+                Ids[word].Remove(id);
+            }
         }
     }
 }
