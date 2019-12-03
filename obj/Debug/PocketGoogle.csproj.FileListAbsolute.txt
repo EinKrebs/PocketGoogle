@@ -1,0 +1,14 @@
+D:\C#Projects\PocketGoogle\bin\Debug\Texts\0.txt
+D:\C#Projects\PocketGoogle\bin\Debug\Texts\1.txt
+D:\C#Projects\PocketGoogle\bin\Debug\Texts\2.txt
+D:\C#Projects\PocketGoogle\bin\Debug\Texts\4.txt
+D:\C#Projects\PocketGoogle\bin\Debug\PocketGoogle.exe.config
+D:\C#Projects\PocketGoogle\bin\Debug\PocketGoogle.exe
+D:\C#Projects\PocketGoogle\bin\Debug\PocketGoogle.pdb
+D:\C#Projects\PocketGoogle\bin\Debug\nunit.framework.dll
+D:\C#Projects\PocketGoogle\obj\Debug\PocketGoogle.csprojAssemblyReference.cache
+D:\C#Projects\PocketGoogle\obj\Debug\PocketGoogle.Properties.Resources.resources
+D:\C#Projects\PocketGoogle\obj\Debug\PocketGoogle.csproj.GenerateResource.cache
+D:\C#Projects\PocketGoogle\obj\Debug\PocketGoogle.csproj.CopyComplete
+D:\C#Projects\PocketGoogle\obj\Debug\PocketGoogle.exe
+D:\C#Projects\PocketGoogle\obj\Debug\PocketGoogle.pdb
