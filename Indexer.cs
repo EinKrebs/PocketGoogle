@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PocketGoogle
 {
@@ -11,6 +9,8 @@ namespace PocketGoogle
     {
         private Dictionary<string, Dictionary<int, List<int>>> Ids =
             new Dictionary<string, Dictionary<int, List<int>>>();
+        
+        private Dictionary<int, string> texts = new Dictionary<int, string>();
 
         private static Tuple<string, int> GetWord(int startIndex, string text)
         {
@@ -25,8 +25,28 @@ namespace PocketGoogle
             return Tuple.Create(word.ToString(), startIndex);
         }
 
+        private static List<Tuple<string, int>> GetWords(string text)
+        {
+            var index = 0;
+            var words = new List<Tuple<string, int>>();
+            while (index < text.Length)
+            {
+                var tuple = GetWord(index, text);
+                var word = tuple.Item1;
+                var position = 0;
+                if (word == string.Empty)
+                    continue;
+                words.Add(Tuple.Create(word, index));
+                position++;
+                index = tuple.Item2;
+            }
+
+            return words;
+        }
+
         public void Add(int id, string documentText)
         {
+            texts[id] = documentText;
             var index = 0;
             while (index < documentText.Length)
             {
@@ -63,7 +83,7 @@ namespace PocketGoogle
 
         public void Remove(int id)
         {
-            return;
+            
         }
     }
 }
