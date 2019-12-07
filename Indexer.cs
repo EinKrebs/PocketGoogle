@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms.VisualStyles;
 using NUnit.Framework;
 
 namespace PocketGoogle
 {
     public class Indexer : IIndexer
     {
-        private Dictionary<string, Dictionary<int, List<int>>> Ids =
-            new Dictionary<string, Dictionary<int, List<int>>>();
-        
+        private Dictionary<string, HashSet<int>> Ids = new Dictionary<string, HashSet<int>>();
         private Dictionary<int, string> texts = new Dictionary<int, string>();
+        private Dictionary<int, Dictionary<string, List<int>>> Positions = new Dictionary<int, Dictionary<string, List<int>>>();
 
         private static Tuple<string, int> GetWord(int startIndex, string text)
         {
@@ -49,50 +49,55 @@ namespace PocketGoogle
 
         public void Add(int id, string documentText)
         {
-            texts[id] = documentText;
             var words = GetTuples(documentText);
+            texts[id] = documentText;
+            Positions[id] = new Dictionary<string, List<int>>();
             foreach (var tuple in words)
             {
                 var word = tuple.Item1;
                 var position = tuple.Item2;
                 if (!Ids.ContainsKey(word))
                 {
-                    Ids[word] = new Dictionary<int, List<int>>();
+                    Ids[word] = new HashSet<int>();
                 }
 
-                if (!Ids[word].ContainsKey(id))
+                if (!Positions[id].ContainsKey(word))
                 {
-                    Ids[word][id] = new List<int>();
+                    Positions[id][word] = new List<int>();
                 }
                 
-                Ids[word][id].Add(position);
+                Positions[id][word].Add(position);
+                Ids[word].Add(id);
             }
         }
 
         public List<int> GetIds(string word)
         {
-            return !Ids.TryGetValue(word, out var result) ? new List<int>() : result.Keys.ToList();
+            return !Ids.TryGetValue(word, out var result) ? new List<int>() : result.ToList();
         }
 
         public List<int> GetPositions(int id, string word)
         {
-            Dictionary<int, List<int>> dictionary;
             List<int> positions;
-            if(!Ids.TryGetValue(word, out dictionary))
+            if(!Positions.TryGetValue(id, out var dictionary))
             {
                 return new List<int>();
             }
 
-            return dictionary.TryGetValue(id, out positions) ? positions : new List<int>();
+            return dictionary.TryGetValue(word, out positions) ? positions : new List<int>();
         }
 
         public void Remove(int id)
         {
-            var text = texts[id];
-            var tuples = GetTuples(text);
+            Positions.Remove(id);
+            var tuples = GetTuples(texts[id]);
             foreach (var word in tuples.Select(tuple => tuple.Item1))
             {
                 Ids[word].Remove(id);
+                if (Ids[word].Count == 0)
+                {
+                    Ids.Remove(word);
+                }
             }
         }
     }

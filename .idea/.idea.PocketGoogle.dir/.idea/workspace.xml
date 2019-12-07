@@ -4,12 +4,6 @@
     <list default="true" id="4c0e1aad-4b5a-4067-b039-f0336dc91402" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketGoogle.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketGoogle.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Indexer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Indexer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PocketGoogle.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PocketGoogle.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/PocketGoogle.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PocketGoogle.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/PocketGoogle.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PocketGoogle.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/PocketGoogle.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PocketGoogle.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/PocketGoogle.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PocketGoogle.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/PocketGoogle.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PocketGoogle.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,15 +14,20 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="183432c1bda614a1cbd885fca81a8c38e0064ce9" />
+        <entry key="$PROJECT_DIR$" value="OwnWay" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PockerGoogleWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IIndexer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ECD3F11-D027-42CB-A32F-58723999A994/5a/3fffa91f/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Indexer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EF28F193-EAB6-4E49-B44B-3FB27EAB4F75/9d/bca47b6d/Int32.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -114,7 +113,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575353135320</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added tests.">
+      <created>1575729437474</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575729437474</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added tests.">
+      <created>1575729437999</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575729437999</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +153,8 @@
     <MESSAGE value="Updated using shitty struct" />
     <MESSAGE value="Added GetWords" />
     <MESSAGE value="Changed Add and added Remove" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Add and added Remove" />
+    <MESSAGE value="Added tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -149,11 +163,39 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Indexer.cs</url>
+          <line>74</line>
+          <properties documentPath="$PROJECT_DIR$/Indexer.cs" initialLine="72">
+            <startOffsets>
+              <option value="2469" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2470" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/PockerGoogleWindow.cs</url>
+          <line>60</line>
+          <properties documentPath="$PROJECT_DIR$/PockerGoogleWindow.cs" initialLine="60">
+            <startOffsets>
+              <option value="1704" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1743" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="DotNetProject">
         <watch expression="texts" language="C#" custom="RiderImportsList:" />
+        <watch expression="Indexer" language="C#" custom="RiderImportsList:" />
+        <watch expression="indexer" language="C#" custom="RiderImportsList:" />
       </configuration>
     </watches-manager>
   </component>
