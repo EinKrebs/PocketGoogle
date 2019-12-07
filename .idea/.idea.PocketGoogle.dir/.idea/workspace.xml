@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c0e1aad-4b5a-4067-b039-f0336dc91402" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PocketGoogle.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PocketGoogle.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Indexer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Indexer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/PocketGoogle.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PocketGoogle.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/PocketGoogle.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PocketGoogle.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PocketGoogle.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PocketGoogle.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/PocketGoogle.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PocketGoogle.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575729437999</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Olexandro Lozhkin - Bog!!!">
+      <created>1575735288643</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575735288643</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +164,8 @@
     <MESSAGE value="Added GetWords" />
     <MESSAGE value="Changed Add and added Remove" />
     <MESSAGE value="Added tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests." />
+    <MESSAGE value="Olexandro Lozhkin - Bog!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Olexandro Lozhkin - Bog!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -165,13 +176,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Indexer.cs</url>
-          <line>74</line>
+          <line>72</line>
           <properties documentPath="$PROJECT_DIR$/Indexer.cs" initialLine="72">
             <startOffsets>
-              <option value="2469" />
+              <option value="2390" />
             </startOffsets>
             <endOffsets>
-              <option value="2470" />
+              <option value="2391" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
