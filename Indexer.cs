@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using NUnit.Framework;
 
 namespace PocketGoogle
 {
@@ -28,17 +30,18 @@ namespace PocketGoogle
         private static List<Tuple<string, int>> GetTuples(string text)
         {
             var index = 0;
-            var position = 0;
             var words = new List<Tuple<string, int>>();
             while (index < text.Length)
             {
                 var tuple = GetWord(index, text);
                 var word = tuple.Item1;
                 if (word == string.Empty)
+                {
+                    index++;
                     continue;
+                }
                 words.Add(Tuple.Create(word, index));
-                position++;
-                index = tuple.Item2;
+                index = tuple.Item2 + 1;
             }
 
             return words;
@@ -68,12 +71,19 @@ namespace PocketGoogle
 
         public List<int> GetIds(string word)
         {
-            return Ids[word].Keys.ToList();
+            return !Ids.TryGetValue(word, out var result) ? new List<int>() : result.Keys.ToList();
         }
 
         public List<int> GetPositions(int id, string word)
         {
-            return Ids[word][id];
+            Dictionary<int, List<int>> dictionary;
+            List<int> positions;
+            if(!Ids.TryGetValue(word, out dictionary))
+            {
+                return new List<int>();
+            }
+
+            return dictionary.TryGetValue(id, out positions) ? positions : new List<int>();
         }
 
         public void Remove(int id)
@@ -84,6 +94,26 @@ namespace PocketGoogle
             {
                 Ids[word].Remove(id);
             }
+        }
+    }
+    
+    [TestFixture]
+    public static class Tests
+    {
+        [Test]
+        public static void Test()
+        {
+            var indexer = new Indexer();
+            var text = "A rabbit sleeps. A hole stands.";
+            indexer.Add(0, text);
+            text = "A. A aldus.";
+            indexer.Add(1, text);
+            var positions = indexer.GetPositions(0, "A");
+            var expectedPositions = new[] {0, 17};
+            Assert.AreEqual(positions, expectedPositions);
+            var ids = indexer.GetIds("A");
+            var expectedIds = new[] {0, 1};
+            Assert.AreEqual(ids, expectedIds);
         }
     }
 }
