@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c0e1aad-4b5a-4067-b039-f0336dc91402" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Indexer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Indexer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/PocketGoogle.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PocketGoogle.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/PocketGoogle.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/PocketGoogle.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/PocketGoogle.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PocketGoogle.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/PocketGoogle.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/PocketGoogle.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="4c0e1aad-4b5a-4067-b039-f0336dc91402" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575735288643</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Removed extra using`s.">
+      <created>1575735657966</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575735657967</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +166,8 @@
     <MESSAGE value="Changed Add and added Remove" />
     <MESSAGE value="Added tests." />
     <MESSAGE value="Olexandro Lozhkin - Bog!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Olexandro Lozhkin - Bog!!!" />
+    <MESSAGE value="Removed extra using`s." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed extra using`s." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
